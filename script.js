@@ -1,6 +1,6 @@
 console.log("Welcome to tic tac toe");
 let turn = "X";
-let gameOver = false;
+let oneClick = false;
 let isWinner = false;
 const changeTurn = () => {
   return turn === "X" ? "O" : "X";
@@ -49,9 +49,11 @@ Array.from(boxes).forEach((box) => {
             "Turn for " + turn;
         }
         else{
-            document.getElementsByClassName("info")[0].innerText = "Draw";
+            if (oneClick===true){document.getElementsByClassName("info")[0].innerText = "Draw";}
+            
         }
       }
+      onclick=true
     }
   });
 });
